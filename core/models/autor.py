@@ -1,3 +1,5 @@
+from tabnanny import verbose
+
 from django.db import models
 
 class Autor(models.Model):
@@ -6,3 +8,7 @@ class Autor(models.Model):
 
     def __str__(self):
         return self.nome
+    
+    class Meta:
+        verbose_name = 'Autor'
+        verbose_name_plural = 'Autores'
